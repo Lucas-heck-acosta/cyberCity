@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap 2</title>
+    <title>CyberCity</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <style>
         .carousel-item
@@ -37,161 +37,219 @@
         {
             transition: transform 0.3s ease;
         }
+        .modal-header .btn-close
+        {
+            background-color: #fff;
+            color: #fff;
+        }
+        
     </style>
 </head>
 <body class="bg-dark">
     
-    <div class="container">
-        <div class="dropdown" id="dropdownMenu">
-            <button id="dropdownMenuButton" data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle">
-                Log In
-                <span class="dropdown-toggle-icon"></span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-dark">
-                <li class="dropdown-item">
-                    <a href="#">Log in usuário</a>
-                </li>
-                <li class="dropdown-item">
-                    <a href="#">Log in fornecedor</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div>
-        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div data-bs-interval="3000" class="carousel-item active">
-                    <img src="./images/slide1.jpg" alt="slide1">
+    <div class="modal" id="modal" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h4>Participe da nossa newsletter</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-                <div data-bs-interval="3000" class="carousel-item">
-                    <img src="./images/slide2.jpg" alt="slide2">
+                <div class="modal-body">
+                    <form>
+                        <label for="nome" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="nome" name="nome">
+                        <br>            
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </form>
                 </div>
-                <div data-bs-interval="3000" class="carousel-item">
-                    <img src="./images/slide3.jpg" alt="slide 3">
-                </div>
-            </div>
-            <button type="button" data-bs-target="#carousel" data-bs-slide="prev" class="carousel-control-prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button type="button" data-bs-target="#carousel" data-bs-slide="next" class="carousel-control-next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <div class="card text-bg-dark">
-                    <img src="./images/seoul-5040704_1280.jpg" alt="placeholder" class="card-img">
-                    <div class="card-body">
-                        <h4 class="card-title">Titulo</h4>
-                        <h5 class="card-subtitle">Subtitulo</h5>
-                        <p class="card-text">Descricao</p>
-                        <a href="#" class="btn btn-primary">Link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card text-bg-dark">
-                    <img src="./images/hong-kong-3713491_1280.jpg" alt="placeholder" class="card-img">
-                    <div class="card-body">
-                        <h4 class="card-title">Titulo</h4>
-                        <h5 class="card-subtitle">Subtitulo</h5>
-                        <p class="card-text">Descricao</p>
-                        <a href="#" class="btn btn-primary">Link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card text-bg-dark">
-                    <img src="https://cdn.pixabay.com/photo/2022/12/23/15/50/tram-7674570_1280.jpg" alt="placeholder" class="card-img">
-                    <div class="card-body">
-                        <h4 class="card-title">Titulo</h4>
-                        <h5 class="card-subtitle">Subtitulo</h5>
-                        <p class="card-text">Descricao</p>
-                        <a href="#" class="btn btn-primary">Link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card text-bg-dark">
-                    <img src="https://cdn.pixabay.com/photo/2022/12/23/15/50/tram-7674570_1280.jpg" alt="placeholder" class="card-img">
-                    <div class="card-body">
-                        <h4 class="card-title">Titulo</h4>
-                        <h5 class="card-subtitle">Subtitulo</h5>
-                        <p class="card-text">Descricao</p>
-                        <a href="#" class="btn btn-primary">Link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card text-bg-dark">
-                    <img src="./images/hong-kong-3713491_1280.jpg" alt="placeholder" class="card-img">
-                    <div class="card-body">
-                        <h4 class="card-title">Titulo</h4>
-                        <h5 class="card-subtitle">Subtitulo</h5>
-                        <p class="card-text">Descricao</p>
-                        <a href="#" class="btn btn-primary">Link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card text-bg-dark">
-                    <img src="./images/seoul-5040704_1280.jpg" alt="placeholder" class="card-img">
-                    <div class="card-body">
-                        <h4 class="card-title">Titulo</h4>
-                        <h5 class="card-subtitle">Subtitulo</h5>
-                        <p class="card-text">Descricao</p>
-                        <a href="#" class="btn btn-primary">Link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card text-bg-dark">
-                    <img src="https://cdn.pixabay.com/photo/2022/12/23/15/50/tram-7674570_1280.jpg" alt="placeholder" class="card-img">
-                    <div class="card-body">
-                        <h4 class="card-title">Titulo</h4>
-                        <h5 class="card-subtitle">Subtitulo</h5>
-                        <p class="card-text">Descricao</p>
-                        <a href="#" class="btn btn-primary">Link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card text-bg-dark">
-                    <img src="./images/seoul-5040704_1280.jpg" alt="placeholder" class="card-img">
-                    <div class="card-body">
-                        <h4 class="card-title">Titulo</h4>
-                        <h5 class="card-subtitle">Subtitulo</h5>
-                        <p class="card-text">Descricao</p>
-                        <a href="#" class="btn btn-primary">Link</a>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" id="confirmar">Confirmar</button>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <header id="header">
+        <div class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <div class="container">
+                <a href="#inicio" class="navbar-brand"><h2>CyberCity</h1></a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a href="#inicio" class="nav-link active">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#propriedades" class="nav-link">Propriedades</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="#sobre" class="nav-link">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown" id="dropdownMenu">
+                                <button id="dropdownMenuButton" data-bs-toggle="dropdown" class="btn btn-dark dropdown-toggle">
+                                    Log In
+                                    <span class="dropdown-toggle-icon"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li class="dropdown-item">
+                                        <a href="#">Log in usuário</a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="#">Log in fornecedor</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div data-bs-spy="scroll" data-bs-target="#header">
+        <section id="inicio">
+            <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div data-bs-interval="3000" class="carousel-item active">
+                        <img src="./images/slide1.jpg" alt="slide1">
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img src="./images/slide2.jpg" alt="slide2">
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img src="./images/slide3.jpg" alt="slide 3">
+                    </div>
+                </div>
+                <button type="button" data-bs-target="#carousel" data-bs-slide="prev" class="carousel-control-prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide="next" class="carousel-control-next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+    
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+    
+                </div>
+            </div>
+        </section>
+
+
+        <section id="propriedades">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card text-bg-dark">
+                            <img src="./images/seoul-5040704_1280.jpg" alt="placeholder" class="card-img">
+                            <div class="card-body">
+                                <h4 class="card-title">Titulo</h4>
+                                <h5 class="card-subtitle">Subtitulo</h5>
+                                <p class="card-text">Descricao</p>
+                                <a href="#" class="btn btn-primary">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card text-bg-dark">
+                            <img src="./images/hong-kong-3713491_1280.jpg" alt="placeholder" class="card-img">
+                            <div class="card-body">
+                                <h4 class="card-title">Titulo</h4>
+                                <h5 class="card-subtitle">Subtitulo</h5>
+                                <p class="card-text">Descricao</p>
+                                <a href="#" class="btn btn-primary">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card text-bg-dark">
+                            <img src="https://cdn.pixabay.com/photo/2022/12/23/15/50/tram-7674570_1280.jpg" alt="placeholder" class="card-img">
+                            <div class="card-body">
+                                <h4 class="card-title">Titulo</h4>
+                                <h5 class="card-subtitle">Subtitulo</h5>
+                                <p class="card-text">Descricao</p>
+                                <a href="#" class="btn btn-primary">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card text-bg-dark">
+                            <img src="https://cdn.pixabay.com/photo/2022/12/23/15/50/tram-7674570_1280.jpg" alt="placeholder" class="card-img">
+                            <div class="card-body">
+                                <h4 class="card-title">Titulo</h4>
+                                <h5 class="card-subtitle">Subtitulo</h5>
+                                <p class="card-text">Descricao</p>
+                                <a href="#" class="btn btn-primary">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card text-bg-dark">
+                            <img src="./images/hong-kong-3713491_1280.jpg" alt="placeholder" class="card-img">
+                            <div class="card-body">
+                                <h4 class="card-title">Titulo</h4>
+                                <h5 class="card-subtitle">Subtitulo</h5>
+                                <p class="card-text">Descricao</p>
+                                <a href="#" class="btn btn-primary">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card text-bg-dark">
+                            <img src="./images/seoul-5040704_1280.jpg" alt="placeholder" class="card-img">
+                            <div class="card-body">
+                                <h4 class="card-title">Titulo</h4>
+                                <h5 class="card-subtitle">Subtitulo</h5>
+                                <p class="card-text">Descricao</p>
+                                <a href="#" class="btn btn-primary">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card text-bg-dark">
+                            <img src="https://cdn.pixabay.com/photo/2022/12/23/15/50/tram-7674570_1280.jpg" alt="placeholder" class="card-img">
+                            <div class="card-body">
+                                <h4 class="card-title">Titulo</h4>
+                                <h5 class="card-subtitle">Subtitulo</h5>
+                                <p class="card-text">Descricao</p>
+                                <a href="#" class="btn btn-primary">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card text-bg-dark">
+                            <img src="./images/seoul-5040704_1280.jpg" alt="placeholder" class="card-img">
+                            <div class="card-body">
+                                <h4 class="card-title">Titulo</h4>
+                                <h5 class="card-subtitle">Subtitulo</h5>
+                                <p class="card-text">Descricao</p>
+                                <a href="#" class="btn btn-primary">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+        <section id="sobre">
+            
+        </section>
+    </div>
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $('#dropdownMenuButton').click(function () {
-                $(this).toggleClass('rotate-down');
-            });
-
-            $('#dropdownMenu').on('hidden.bs.dropdown', function () {
-                $('#dropdownMenuButton').removeClass('rotate-down');
-            });
-
-        });
-    </script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
+	<script src="./js/main.js"></script>
 </body>
 </html>
