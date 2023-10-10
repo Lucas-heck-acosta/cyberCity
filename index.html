@@ -87,6 +87,9 @@
                         <li class="nav-item">
                             <a href="#propriedades" class="nav-link">Propriedades</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="#regioes" class="nav-link">Regiões</a>
+                        </li>
                         <li class="nav-item ">
                             <a href="#sobre" class="nav-link">Sobre</a>
                         </li>
@@ -242,8 +245,43 @@
         <section id="sobre">
             
         </section>
+
+        <section id="regioes" class="bg-light">
+            <div class="container">
+                
+                <h3>Regiões</h3>
+                <nav class="nav nav-pills">
+                    <button data-bs-toggle="tab" data-bs-target="#norte" class="nav-link active" type="button">Norte</button>
+                    <button data-bs-toggle="tab" data-bs-target="#centro" class="nav-link" type="button">Centro</button>
+                    <button data-bs-toggle="tab" data-bs-target="#sul" class="nav-link" type="button">Sul</button>
+                </nav>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="norte">
+                        Região Norte
+                    </div>
+                    <div class="tab-pane" id="centro">
+                        Região Centro
+                    </div>
+                    <div class="tab-pane" id="sul">
+                        Região Sul
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </div>
     
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" id="toast-succ">
+            <header class="toast-header">
+                <strong>Sucesso</strong>
+            </header>
+            <div class="toast-body">
+                Inscrição realizada
+            </div>
+        </div>
+    </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

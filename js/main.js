@@ -31,6 +31,8 @@ $(document).ready(function() {
         if ($('form').valid())
         {
             $('#modal').modal('hide');
+            toast = new bootstrap.Toast(document.getElementById('toast-succ'))
+            toast.show()
         } 
         else
         {
